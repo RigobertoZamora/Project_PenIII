@@ -10,10 +10,14 @@
     <script src="funciones.js"></script>
 </head>
 <body>
+<nav class="menu">
+  <div class="contenedor">
   <ul>
     <li><a href="loginn.html">ADMINISTRADOR</a></li>
     <li><a href="acerca.html">ACERCA DE...</a></li>
   </ul>
+  </div>
+</nav>
     <div id="formulario" class="centrado form">
         <p class="centrado grande identar">Ingresa los datos del prestamista</p>
       <form method="post" action="ingresa.php" name="formulario">

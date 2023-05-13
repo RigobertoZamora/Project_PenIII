@@ -13,13 +13,18 @@
 <?php
     //$validacion = $_POST['nombre'];
     $conexion = mysqli_connect("localhost", "root", "administrador", "inventarioc");
-        echo '<ul> 
+        echo '
+            <nav class="menu">
+            <div class="contenedor">
+            <ul> 
                 <li><a href="formulario.php">CERRAR SESION</a></li>
                 <li><a href="mostrar_datos1.php">REGISTROS ACTUALES</a></li>
                 <li><a href="historial.php">HISTORIAL</a></li>
                 <li><a href="inventario.php">INVENTARIO</a></li>
                 <li><a href="administradores.php">ADMINISTRADORES</a></li>
-            </ul>';  
+            </ul>
+            </div>
+            </nav>';  
         echo "
         <h1>Bienvenido al Sistema</h1>";
         echo "Usuario: ".$validacion['nombre'];

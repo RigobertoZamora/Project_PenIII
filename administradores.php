@@ -16,13 +16,17 @@
     $comando = "SELECT * FROM admins";
     $resultado = mysqli_query($conexion, $comando);
     $validacion = mysqli_fetch_array($resultado);
-    echo '<ul> 
+    echo '<nav class="menu">
+            <div class="contenedor">
+            <ul> 
                 <li><a href="formulario.php">CERRAR SESION</a></li>
                 <li><a href="mostrar_datos1.php">REGISTROS ACTUALES</a></li>
                 <li><a href="historial.php">HISTORIAL</a></li>
                 <li><a href="inventario.php">INVENTARIO</a></li>
                 <li><a href="administradores.php">ADMINISTRADORES</a></li>
-            </ul>';  
+            </ul>
+            </div>
+          </nav>';  
         echo "
         <h1><center>Bienvenido al Sistema</center></h1>";
         echo "Usuario: ".$validacion['nombre'];

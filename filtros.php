@@ -49,13 +49,17 @@
     $resultado = mysqli_query($conexion, $querySelect);
  ?>
  <!--Sección de la lista (me encanta este separador)--------------------------->
+        <nav class="menu">
+        <div class="contenedor">
         <ul> 
             <li><a href="formulario.php">CERRAR SESION</a></li>
             <li><a href="mostrar_datos1.php">REGISTROS ACTUALES</a></li>
             <li><a href="historial.php">HISTORIAL</a></li>
             <li><a href="inventario.php">INVENTARIO</a></li>
             <li><a href="administradores.php">ADMINISTRADORES</a></li>
-        </ul>  
+        </ul>
+        </div>
+        </nav>  
 <!----------------------------------------------------------------------------->
         <h1>Inventario del centro de computo principal</h1>
         <h3>Vista actual del inventario: <?php echo"$filtro";?></h3>

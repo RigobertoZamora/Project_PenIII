@@ -10,6 +10,8 @@
 <body>
 
 <!--Lista-->
+<nav class="menu">
+<div class="contenedor">
 <ul> 
     <li><a href="formulario.php">CERRAR SESION</a></li>
     <li><a href="mostrar_datos1.php">REGISTROS ACTUALES</a></li>
@@ -17,6 +19,8 @@
     <li><a href="inventario.php">INVENTARIO</a></li>
     <li><a href="administradores.php">ADMINISTRADORES</a></li>
 </ul>
+</div>
+</nav>
 <!--------------------------------------------------------------->
 <h1>Inventario del centro de computo principal</h1>
 <h3>Selecciona un tipo de equipo para una visualización más precisa:</h3>
