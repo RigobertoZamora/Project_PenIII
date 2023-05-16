@@ -10,9 +10,13 @@
     <script src="funciones.js"></script>
   </head>
   <body>
+  <nav class="menu">
+  <div class="contenedor">
   <ul>
     <li><a href="#" onclick="window.history.back();">Regresar</a></li>
   </ul>
+</div>
+</nav>
     <div id="formulario" class="centrado form">
         <p class="centrado grande identar">Ingresa los datos del nuevo administrador</p>
 
@@ -53,6 +57,6 @@
         <input type="button" class="send" value="Registrar Nuevo Administrador" onclick="validarNA();" />
       </form>
     </div>
-    <p class="derecha grande identar"><b><i>Umizumi inc.</i></b></p>
+    <br><br><br><p class="derecha grande identar"><b><i>Umizumi inc.</i></b></p>
   </body>
 </html>

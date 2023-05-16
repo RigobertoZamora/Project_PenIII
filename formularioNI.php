@@ -10,9 +10,13 @@
     <script src="funciones.js"></script>
   </head>
   <body>
+  <nav class="menu">
+  <div class="contenedor">
   <ul>
     <li><a href="inventario.php">Regresar</a></li>
   </ul>
+</div>
+</nav>
     <div id="formulario" class="centrado form">
         <p class="centrado grande identar">Ingresa los datos del nuevo inventario</p>
 
@@ -50,6 +54,7 @@
         <input type="button" class="send" value="Registrar Nuevo Inventario" onclick="NoFuncionaPQ()"/>
       </form>
     </div>
+    <br><br><br>
     <p class="derecha grande identar"><b><i>Umizumi inc.</i></b></p>
   </body>
 </html>

@@ -31,7 +31,7 @@
             </div>
             </nav>';  
         echo "
-        <h1>Bienvenid@ al historial de entregados</h1>";
+        <br><h1>Bienvenid@ al historial de entregados</h1>";
         echo "Usuario: ".$validacion['nombre'];
 
         $querySelect = "SELECT * FROM entregados ORDER BY id ASC";

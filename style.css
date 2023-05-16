@@ -102,12 +102,12 @@ big,
     
 }
 
-.identar h1 {
-  text-indent: 0em;
+h1{
   text-align: center;
+  
   font-style: italic;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif, cursive;
+  font-family: "Arial";
+  margin-top: 2em;
 }
 
 .form {

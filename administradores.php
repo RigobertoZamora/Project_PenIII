@@ -28,7 +28,7 @@
             </div>
           </nav>';  
         echo "
-        <h1><center>Bienvenido al Sistema</center></h1>";
+        <br><h1><center>Control de administradores</center></h1>";
         echo "Usuario: ".$validacion['nombre'];
 
         $querySelect = "SELECT * FROM admins ORDER BY id ASC";
@@ -67,7 +67,7 @@
         
 ?>
         <form method="post" class="salto1" action="formularioNA.php">
-            <input type="submit" class="btnInit" value="Añadir administrador" />
+            <input type="submit" class="btnInit" value="Añadir Nuevo Administrador" />
         </form>
         
 </body>

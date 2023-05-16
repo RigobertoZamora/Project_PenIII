@@ -45,13 +45,13 @@
             </div>
             </nav>';  
         echo "
-        <h1>Bienvenido al Sistema</h1>";
+        <br><h1>Bienvenido al Sistema</h1>";
 
          
     ?><!--<input type="text" id="usuario" name="usuario" value=" $validacion['nombre'];" readonly/><br>--><?php
        
        echo "Usuario: ".$validacion['nombre'];
-
+       echo "<br><br>Estos son los préstamos actuales:<br><br>";
         $querySelect = "SELECT * FROM registros ORDER BY id ASC";
 
         $resultado = mysqli_query($conexion, $querySelect);

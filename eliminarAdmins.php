@@ -22,7 +22,7 @@
 </div>
 </nav>
 <!--------------------------------------------------------------->
-<h1>Administradores del centro de computo principal</h1>
+<br><h1>Administradores del centro de computo principal</h1>
             <!--Añadir una clase de estilos, en este boton y en los de inventario.php-->
 <h3>¡Proceso exitoso!, el equipo con ID eliminado es: <?php echo $_GET['id']; ?> </h3>
 <?php 

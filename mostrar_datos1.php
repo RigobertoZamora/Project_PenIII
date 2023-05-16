@@ -26,9 +26,9 @@
             </div>
             </nav>';  
         echo "
-        <h1>Bienvenido al Sistema</h1>";
+        <br><h1>Bienvenido al Sistema</h1>";
         echo "Usuario: ".$validacion['nombre'];
-
+        echo "<br><br>Estos son los préstamos actuales:<br><br>";
         $querySelect = "SELECT * FROM registros ORDER BY id ASC";
 
         $resultado = mysqli_query($conexion, $querySelect);

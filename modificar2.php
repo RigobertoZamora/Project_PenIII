@@ -46,7 +46,7 @@
       $equipos .=$equipo4;
     }      
   ?>
-  <h1><center>Actualizando datos a la base de datos</center></h1>
+  <br><h1><center>Actualizando datos a la base de datos</center></h1>
   <?php
     //Paso 1: Me conecto al servidor y guardo la conexion
     $conexion = mysqli_connect("localhost", "root", "administrador", "inventarioc");
