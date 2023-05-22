@@ -25,7 +25,27 @@
     <span>Fecha de Resguardo: </span><?php echo $_POST['fechar']; ?><br>
     <span>BNL: </span><?php echo $_POST['bnl']; ?>
   <?php
-     
+      $consultaMysql = "a";
+      $contadorLaptop = 0;
+      $variable = $_POST['equipo'];
+      switch($variable)
+      {
+        case "LAPTOP":
+          $consultaMysql = "SELECT n_inventario FROM inventario WHERE equipo="$variable;
+          break;
+        case "CABLE VGA":
+          $consultaMysql = "SELECT n_inventario FROM inventario WHERE equipo="$variable;
+          break;
+        case "BOCINAS":
+          $consultaMysql = "SELECT n_inventario FROM inventario WHERE equipo="$variable;
+          break;
+        case "ADAPTADOR":
+          $consultaMysql = "SELECT n_inventario FROM inventario WHERE equipo="$variable;
+          break;
+        case "EXTENSION":
+          $consultaMysql = "SELECT n_inventario FROM inventario WHERE equipo="$variable;
+          break;
+      }
       //Paso 1: Guardamos la conexion en una variable
          $conexion = mysqli_connect("localhost", "root", "administrador", "inventarioc") or die("Hubo un problema al conectar con MySQL");
          //Paso 2: Creamos la consulta SQL
