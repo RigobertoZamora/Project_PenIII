@@ -22,7 +22,7 @@
 </div>
 </nav>
 <!--------------------------------------------------------------->
-<h1><center>Eliminando Datos del prestamista</center></h1>
+<br><h1><center>Eliminando Datos del prestamista</center></h1>
 <h3>El prestamista con ID eliminado es: </h3>
 
 <?php echo $_GET['id']; ?>

@@ -61,7 +61,7 @@
         </div>
         </nav>  
 <!----------------------------------------------------------------------------->
-        <h1>Inventario del centro de computo principal</h1>
+        <br><h1>Inventario del centro de computo principal</h1>
         <h3>Vista actual del inventario: <?php echo"$filtro";?></h3>
         <h3>Selecciona un tipo de equipo para una visualización más precisa:</h3>
         <form method="post" action="filtros.php" name="filtro">

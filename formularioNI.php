@@ -5,14 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuevo inventario</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleNI.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="funciones.js"></script>
   </head>
   <body>
+  <nav class="menu">
+  <div class="contenedor">
   <ul>
     <li><a href="inventario.php">Regresar</a></li>
   </ul>
+</div>
+</nav>
     <div id="formulario" class="centrado form">
         <p class="centrado grande identar">Ingresa los datos del nuevo inventario</p>
 
@@ -21,7 +25,7 @@
         <input type="text" id="ninventario" name="ninventario" class="input" placeholder="Ingresa el numero de inventario"/>
         <br/><br/>
         <select id="equipo" class="input" name="equipo">
-          <option selected disabled>Selecciona equipo</option>
+          <option value="Selecciona equipo">Selecciona equipo</option>
           <option value="LAPTOP">Laptop</option>
           <option value="CABLE VGA">Cable VGA</option>
           <option value="BOCINAS">Bocinas</option>
@@ -50,6 +54,7 @@
         <input type="button" class="send" value="Registrar Nuevo Inventario" onclick="NoFuncionaPQ()"/>
       </form>
     </div>
+    <br><br><br>
     <p class="derecha grande identar"><b><i>Umizumi inc.</i></b></p>
   </body>
 </html>

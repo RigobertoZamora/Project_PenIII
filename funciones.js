@@ -228,33 +228,182 @@ function validarEquipo()
 //Función para validar nuevo inventario
 function NoFuncionaPQ()
 {
-	var bandera = 1;
 	var ninventario = document.getElementById('ninventario').value;
 	var equipo = document.getElementById('equipo').value;
 	var descripcion = document.getElementById('descripcion').value;
 	var nfolio = document.getElementById('nfolio').value;
-	var importe = document.getElementById('importe').value;
+	/*var importe = document.getElementById('importe').value;*/
 	var marca = document.getElementById('marca').value;
 	var modelo = document.getElementById('modelo').value;
 	var serie = document.getElementById('serie').value;
 	var ubicacion = document.getElementById('ubicacion').value;
 	var fechar = document.getElementById('fechar').value;
-	var bnl = document.getElementById('bnl').value;
+	/*var bnl = document.getElementById('bnl').value;*/
+	var bandera = 1;
 	
 	
-	if(ninventario == "")
+	if(ninventario.length == 0)
+	{
+		Swal.fire({
+		icon: 'error',
+		title: 'Alerta',
+		text: 'No puedes dejar el No. inventario en blanco!',
+		showConfirmButton: false,
+		timer: 3000
+		})
+		bandera = 2;
+	}/*else
+	{
+		bandera = 1;
+	}*/
+
+	if(equipo == "Selecciona equipo")
 	{
 		Swal.fire({
 			icon: 'error',
-			title: 'Alerta',
-			text: 'No puedes dejar el No. inventario en blanco!',
+			title: 'Alerta de error',
+			text: 'Debes seleccionar un equipo!',
 			showConfirmButton: false,
 			timer: 3000
 		})
 		bandera = 2;
 	}
-	
-	
+
+
+	if(descripcion.length == 0)
+	{
+		Swal.fire({
+		icon: 'error',
+		title: 'Alerta',
+		text: 'No puedes dejar la descripcion en blanco!',
+		showConfirmButton: false,
+		timer: 3000
+		})
+		bandera = 2;
+	}/*else
+		{
+			bandera = 1;
+		}*/
+
+	if(nfolio.length == 0)
+	{
+		Swal.fire({
+		icon: 'error',
+		title: 'Alerta',
+		text: 'No puedes dejar el No. folio en blanco!',
+		showConfirmButton: false,
+		timer: 3000
+		})
+		bandera = 2;
+		}/*else
+		{
+			bandera = 1;
+		}/*
+
+	/*if(importe.length == 0)
+	{
+		Swal.fire({
+		icon: 'error',
+		title: 'Alerta',
+		text: 'No puedes dejar el importe en blanco!',
+		showConfirmButton: false,
+		timer: 3000
+		})
+		bandera = 2;
+		}else
+		{
+			bandera = 1;
+		}*/
+
+	if(marca.length == 0)
+	{
+		Swal.fire({
+		icon: 'error',
+		title: 'Alerta',
+		text: 'No puedes dejar la marca en blanco!',
+		showConfirmButton: false,
+		timer: 3000
+		})
+		bandera = 2;
+		}/*else
+		{
+			bandera = 1;
+		}*/
+
+	if(modelo.length == 0)
+	{
+		Swal.fire({
+		icon: 'error',
+		title: 'Alerta',
+		text: 'No puedes dejar el modelo en blanco!',
+		showConfirmButton: false,
+		timer: 3000
+		})
+		bandera = 2;
+		}/*else
+		{
+			bandera = 1;
+		}*/
+
+	if(serie.length == 0)
+	{
+		Swal.fire({
+		icon: 'error',
+		title: 'Alerta',
+		text: 'No puedes dejar la serie en blanco!',
+		showConfirmButton: false,
+		timer: 3000
+		})
+		bandera = 2;
+		}/*else
+		{
+			bandera = 1;
+		}*/
+
+	if(ubicacion.length == 0)
+	{
+		Swal.fire({
+		icon: 'error',
+		title: 'Alerta',
+		text: 'No puedes dejar la ubicacion en blanco!',
+		showConfirmButton: false,
+		timer: 3000
+		})
+		bandera = 2;
+		}/*else
+		{
+			bandera = 1;
+		}*/
+
+	if(fechar.length == 0)
+	{
+		Swal.fire({
+		icon: 'error',
+		title: 'Alerta',
+		text: 'No puedes dejar la fecha de resguardo en blanco!',
+		showConfirmButton: false,
+		timer: 3000
+		})
+		bandera = 2;
+		}/*else
+		{
+			bandera = 1;
+		}*/
+
+	/*if(bnl.length == 0)
+	{
+		Swal.fire({
+		icon: 'error',
+		title: 'Alerta',
+		text: 'No puedes dejar el BNL en blanco!',
+		showConfirmButton: false,
+		timer: 3000
+		})
+		bandera = 2;
+	}else
+		{
+			bandera = 1;
+		}*/
 
 	//Hago validacion para saber si mi formulario de nuevo inventario esta bien llenado
 	if(bandera == 1)

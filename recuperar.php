@@ -22,7 +22,7 @@
 </div>
 </nav>
 <!--------------------------------------------------------------->
-<h1><center>Recuperando Datos del prestamista</center></h1>
+<br><h1><center>Recuperando Datos del prestamista</center></h1>
 <h3>El prestamista con ID recuperado es: </h3>
 
 <?php echo $_GET['id']; ?>

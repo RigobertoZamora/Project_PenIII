@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Préstamos vigentes</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="central-style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
@@ -33,25 +33,29 @@
             
     }else{
         echo '
-            <nav class="menu">
-            <div class="contenedor">
-            <ul> 
+            <div id="menuToggle">
+            <nav role="navigation">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
                 <li><a href="formulario.php" >CERRAR SESION</a></li>
                 <li><a href="mostrar_datos1.php">REGISTROS ACTUALES</a></li>
                 <li><a href="historial.php">HISTORIAL</a></li>
                 <li><a href="inventario.php">INVENTARIO</a></li>
                 <li><a href="administradores.php">ADMINISTRADORES</a></li>
             </ul>
-            </div>
-            </nav>';  
+            </nav>
+            </div>';  
         echo "
-        <h1>Bienvenido al Sistema</h1>";
+        <br><h1>Bienvenido al Sistema</h1>";
 
          
     ?><!--<input type="text" id="usuario" name="usuario" value=" $validacion['nombre'];" readonly/><br>--><?php
        
        echo "Usuario: ".$validacion['nombre'];
-
+       echo "<br><br>Estos son los préstamos actuales:<br><br>";
         $querySelect = "SELECT * FROM registros ORDER BY id ASC";
 
         $resultado = mysqli_query($conexion, $querySelect);

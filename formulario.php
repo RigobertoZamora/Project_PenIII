@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro del préstamo</title>
-    <link rel="stylesheet" href="style.css" />
+    <!--<link rel="stylesheet" href="style.css" />-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="funciones.js"></script>
 </head>
@@ -81,14 +81,24 @@
          <!--Poner las etiquetas select abajo de la del label cuando el problema con Javascript se soluciones-->
         <h1 class="centrado grande identar">Selecciona equipo(s)</h1>
         <input type="checkbox" name="equipo" id="equipo" value=" Laptop" onchange="mostrarSelect()">
+        <label for="equipo">Laptop</label>
         <select id="opciones" style="display: none;">
         <option disabled selected>Seleccione una opción</option>
-        <option>Opción 1.1</option>
-        <option>Opción 1.2</option>
-        <option>Opción 1.3</option>
-        <option>Opción 1.4</option>
+        <?php 
+          $conexion = mysqli_connect("localhost", "root", "administrador", "inventarioc");
+          $querySelect = "SELECT n_inventario FROM inventario WHERE equipo='LAPTOP'";
+          echo $querySelect;
+          $resultado = mysqli_query($conexion, $querySelect);
+
+          while($inventario = mysqli_fetch_array($resultado))
+          {
+            alert("a");
+            echo "<option>".$inventario."</option>";
+          }
+        ?>
+        
+        <option><?php.$inventario['n_inventario'].;?></option>
         </select>
-        <label for="equipo">Laptop</label>
 
         <input type="checkbox" name="equipo1" id="equipo1" value=" Cable VGA" onchange="mostrarSelect1()">
         <select id="opciones1" style="display: none;">

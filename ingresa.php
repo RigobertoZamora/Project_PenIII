@@ -5,12 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro guardado</title>
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="central-style.css">
 </head>
 <body>
-  <ul>
-    <li><a href="formulario.php">Inicio</a></li>
-  </ul>
+    <div id="CreditsBtn">
+      <ul>
+        <li>
+          <a href="formulario.php"> <span></span> 🡨 Inicio</a>
+        </li>
+      </ul>
+    </div>
   <?php
       $equipo="| Laptop | ";
       $equipo1="| Cable VGA | ";
@@ -54,13 +58,29 @@
                           
          //Paso 3: Ejecuto la consulta
                         mysqli_query($conexion,$queryInsert);           
-  ?><h1><center>Ingreso de datos del prestamista</center></h1>
-    <h3>Los datos recibidos son:</h3>
-    <span>No.Cuenta: </span><?php echo $_POST['ncuenta']; ?><br>
-    <span>Nombre completo: </span><?php echo $_POST['ncompleto']; ?><br> <span>Grado y grupo: </span><?php echo $_POST['grapo']; ?><br>
-    <span>Fecha: </span><?php echo $_POST['fecha']; ?><br>
-    <span>Hora: </span><?php echo $_POST['hora']; ?><br>
-    <span>Equipo(s): </span><?php echo $equipos; ?><br>
-    <br><br><span>Tienes hasta las 3 de la tarde del día de hoy para devolver el equipo prestado</span>
+  ?>
+  <div id="CreditsBox">
+      <div id="CreditsText">
+        <h1 class="center" id="CreditsText">
+          Ingreso de datos del prestamista
+        </h1>
+        <h3 id="CreditsText">Los datos recibidos son:</h3>
+        <span id="CreditsText">No.Cuenta: </span
+        ><?php echo $_POST['ncuenta']; ?><br /><br />
+        <span id="CreditsText">Nombre completo: </span
+        ><?php echo $_POST['ncompleto']; ?><br /><br />
+        <span>Grado y grupo: </span
+        ><?php echo $_POST['grapo']; ?><br /><br />
+        <span id="CreditsText">Fecha: </span
+        ><?php echo $_POST['fecha']; ?><br /><br />
+        <span id="CreditsText">Hora: </span
+        ><?php echo $_POST['hora']; ?><br /><br />
+        <span id="CreditsText">Equipo(s): </span
+        ><?php echo $equipos; ?><br /><br /><br />
+        <span id="Warning"
+          >¡Tienes hasta las 3 de la tarde del día de hoy para devolver el equipo prestado!</span
+        >
+      </div>
+    </div>
 </body>
 </html>

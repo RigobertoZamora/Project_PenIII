@@ -65,6 +65,6 @@
       </form>
     </div>
     <p class="derecha grande identar"><b><i>Umizumi inc.</i></b></p>
-    <a href="administradores.php" class="derecha grande identar">Regresar</a>
+    <a href="administradores.php" class="derecha grande identar">🡨 Regresar</a>
 </body>
 </html>
