@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modificando un Administrador</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="central-style.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="funciones.js"></script>
 </head>

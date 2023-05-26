@@ -10,13 +10,16 @@
     <script src="funciones.js"></script>
   </head>
   <body>
-  <nav class="menu">
-  <div class="contenedor">
-  <ul>
-    <li><a href="inventario.php">Regresar</a></li>
-  </ul>
-</div>
-</nav>
+<!--Mismo problema que con formularioNA.php-->
+   <div id="CreditsBtn">
+      <ul>
+        <li>
+          <a href="inventario.php"> <span></span> 🡨 Regresar</a>
+        </li>
+      </ul>
+    </div>
+
+<!--Adaptar este formulario al estilo del principal-->
     <div id="formulario" class="centrado form">
         <p class="centrado grande identar">Ingresa los datos del nuevo inventario</p>
 

@@ -35,7 +35,7 @@
             </nav>
             </div>';  
         echo "
-        <br><h1>Bienvenid@ al historial de entregados</h1>";
+        <br><h1><center>Bienvenid@ al historial de entregados</center></h1>";
         echo "Usuario: ".$validacion['nombre'];
 
         $querySelect = "SELECT * FROM entregados ORDER BY id ASC";
@@ -43,7 +43,7 @@
         $resultado = mysqli_query($conexion, $querySelect);
 ?>
     <!--La tabla principal al entrar en admins-->
-        <table> 
+        <table id="container"> 
             <tr>
                <th>ID</th>
                <th>No.Cuenta</th>

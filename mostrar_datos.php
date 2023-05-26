@@ -49,7 +49,7 @@
             </nav>
             </div>';  
         echo "
-        <br><h1>Bienvenido al Sistema</h1>";
+        <br><h1><center>Bienvenido al Sistema</center></h1>";
 
          
     ?><!--<input type="text" id="usuario" name="usuario" value=" $validacion['nombre'];" readonly/><br>--><?php
@@ -61,7 +61,7 @@
         $resultado = mysqli_query($conexion, $querySelect);
 ?>
     <!--La tabla principal al entrar en admins-->    
-        <table> 
+        <table id="container"> 
             <tr>
                <th>ID</th>
                <th>No.Cuenta</th>

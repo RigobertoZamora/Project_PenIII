@@ -4,26 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de eliminado</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Registro Entregado</title>
+    <link rel="stylesheet" href="central-style.css">
 </head>
 <body>
 
 <!--Lista-->
-<nav class="menu">
-<div class="contenedor">
-<ul> 
-    <li><a href="formulario.php">CERRAR SESION</a></li>
-    <li><a href="mostrar_datos1.php">REGISTROS ACTUALES</a></li>
-    <li><a href="historial.php">HISTORIAL</a></li>
-    <li><a href="inventario.php">INVENTARIO</a></li>
-    <li><a href="administradores.php">ADMINISTRADORES</a></li>
-</ul>
+<nav role="navigation">
+<div id="menuToggle">
+    <input type="checkbox"/>
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+        <li><a href="formulario.php">CERRAR SESION</a></li>
+        <li><a href="mostrar_datos1.php">REGISTROS ACTUALES</a></li>
+        <li><a href="historial.php">HISTORIAL</a></li>
+        <li><a href="inventario.php">INVENTARIO</a></li>
+        <li><a href="administradores.php">ADMINISTRADORES</a></li>
+    </ul>
 </div>
 </nav>
 <!--------------------------------------------------------------->
 
-<h3>El prestamista con ID "<?php echo $_GET['id']; ?>" ha entregado el equipo</h3>
+<h3>El préstamo con ID "<?php echo $_GET['id']; ?>" ha sido marcado como "Entregado"</h3>
+<br>
+<h3>De haberse tratado de un error favor de ingresar al historial y seleccionar "Recuperar" en el registro</h3>
 
 <?php
           date_default_timezone_set('America/Chihuahua');
@@ -46,9 +52,6 @@
           readonly
         />
         <br />
-
-
-
 
 <?php 
 // Paso 1: Conectar al servidor y guardar la conexión
@@ -79,7 +82,7 @@ $querySelect = "SELECT * FROM registros ORDER BY nombre ASC";
 $resultado = mysqli_query($conexion, $querySelect);
 ?>
 
-<table> 
+<table id="container"> 
 <tr>
        <th>ID</th>
        <th>No.Cuenta</th>

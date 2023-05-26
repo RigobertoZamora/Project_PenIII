@@ -5,17 +5,13 @@
 </head>
 <body>
 	<!--Lista-->
-<nav class="menu">
-<div class="contenedor">
-<ul>
-  <li><a href="formulario.php">CERRAR SESION</a></li>
-  <li><a href="mostrar_datos1.php">REGISTROS ACTUALES</a></li>
-  <li><a href="historial.php">HISTORIAL</a></li>
-  <li><a href="inventario.php">INVENTARIO</a></li>
-  <li><a href="administradores.php">ADMINISTRADORES</a></li>
-</ul>
+<div id="CreditsBtn">
+      <ul>
+        <li>
+          <a href="mostrar_datos1.php"> <span></span> 🡨 Regresar</a>
+        </li>
+      </ul>
 </div>
-</nav>
 	<!--------------------------------------------------------------->
 	<?php
     $equipo= "| Laptop | ";
@@ -70,7 +66,7 @@
   ?>
   <h3>Los Prestamistas registrados son:</h3><br>
 
-  <table>
+  <table id="container">
     <tr>
        <th>ID</th>
        <th>No.Cuenta</th>

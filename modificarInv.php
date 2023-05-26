@@ -4,25 +4,29 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Modificando registro...</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="central-style.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="funciones.js"></script>
 </head>
 <body>
 	<!--Lista-->
-	<nav class="menu">
-  <div class="contenedor">
-  <ul> 
-    <li><a href="formulario.php">CERRAR SESION</a></li>
-    <li><a href="mostrar_datos1.php">REGISTROS ACTUALES</a></li>
-    <li><a href="historial.php">HISTORIAL</a></li>
-    <li><a href="inventario.php">INVENTARIO</a></li>
-    <li><a href="administradores.php">ADMINISTRADORES</a></li>
-  </ul>
-  </div>
+	<nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox"/>
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <li><a href="formulario.php">CERRAR SESION</a></li>
+              <li><a href="mostrar_datos1.php">REGISTROS ACTUALES</a></li>
+              <li><a href="historial.php">HISTORIAL</a></li>
+              <li><a href="inventario.php">INVENTARIO</a></li>
+              <li><a href="administradores.php">ADMINISTRADORES</a></li>
+            </ul>
+        </div>
   </nav>
 	<!------------------------------------------------------------->
-	<h1><center>-Modificación de datos-</center></h1>
+	<br><h1><center>-Modificación de datos-</center></h1>
 	<?php
 		//Paso 1:  creo la conexion
 		$conexion  = mysqli_connect("localhost", "root", "administrador", "inventarioc");

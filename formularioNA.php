@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="funciones.js"></script>
-  </head>
-  <body>
-  <nav class="menu">
-  <div class="contenedor">
-  <ul>
-    <li><a href="#" onclick="window.history.back();">Regresar</a></li>
-  </ul>
-</div>
-</nav>
+</head>
+<body>
+<!--No entiendo porqué no adopta el estilo que debe de ser-->
+  <div id="CreditsBtn">
+      <ul>
+        <li>
+          <a href="#" onclick="window.history.back();"> <span></span> 🡨 Inicio</a>
+        </li>
+      </ul>
+    </div>
+
+<!--Adaptar este formulario al estilo del principal-->
     <div id="formulario" class="centrado form">
         <p class="centrado grande identar">Ingresa los datos del nuevo administrador</p>
 

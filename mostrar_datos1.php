@@ -30,7 +30,7 @@
             </nav>
             </div>';  
         echo "
-        <br><h1>Bienvenido al Sistema</h1>";
+        <br><h1><center>Bienvenido al Sistema</center></h1>";
         echo "Usuario: ".$validacion['nombre'];
         echo "<br><br>Estos son los préstamos actuales:<br><br>";
         $querySelect = "SELECT * FROM registros ORDER BY id ASC";
@@ -38,7 +38,7 @@
         $resultado = mysqli_query($conexion, $querySelect);
 ?>
     <!--La tabla principal al entrar en admins-->
-        <table> 
+        <table id="container"> 
             <tr>
                <th>ID</th>
                <th>No.Cuenta</th>

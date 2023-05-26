@@ -5,21 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control de inventario</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="central-style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     
 <?php
-    /*if(isset($_POST['equipo'])) {
+    /*Código por problemas de conexion (ignorar)
+    if(isset($_POST['equipo'])) {
         echo "El formulario se envió correctamente";
     } else {
         echo "El formulario no se envió correctamente";
     }*/
-    $conexion = mysqli_connect("localhost", "root", "administrador", "inventarioc");
-
-    //Preguntar a César si esto se puede poner en inventario.php
     
+    $conexion = mysqli_connect("localhost", "root", "administrador", "inventarioc");
     $filtro = $_POST['equipo'];
         switch($filtro)
         {
@@ -48,20 +47,24 @@
     }
     $resultado = mysqli_query($conexion, $querySelect);
  ?>
- <!--Sección de la lista (me encanta este separador)--------------------------->
-        <nav class="menu">
-        <div class="contenedor">
-        <ul> 
-            <li><a href="formulario.php">CERRAR SESION</a></li>
-            <li><a href="mostrar_datos1.php">REGISTROS ACTUALES</a></li>
-            <li><a href="historial.php">HISTORIAL</a></li>
-            <li><a href="inventario.php">INVENTARIO</a></li>
-            <li><a href="administradores.php">ADMINISTRADORES</a></li>
-        </ul>
+ <!-------------------------------------Lista--------------------------------->
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox"/>
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu"> 
+                <li><a href="formulario.php">CERRAR SESION</a></li>
+                <li><a href="mostrar_datos1.php">REGISTROS ACTUALES</a></li>
+                <li><a href="historial.php">HISTORIAL</a></li>
+                <li><a href="inventario.php">INVENTARIO</a></li>
+                <li><a href="administradores.php">ADMINISTRADORES</a></li>
+            </ul>
         </div>
-        </nav>  
+    </nav>  
 <!----------------------------------------------------------------------------->
-        <br><h1>Inventario del centro de computo principal</h1>
+        <br><h1><center>Inventario del centro de cómputo principal</center></h1>
         <h3>Vista actual del inventario: <?php echo"$filtro";?></h3>
         <h3>Selecciona un tipo de equipo para una visualización más precisa:</h3>
         <form method="post" action="filtros.php" name="filtro">
@@ -78,8 +81,8 @@
         </form>
     
         <br><br>
-    <!--La tabla principal al entrar en admins-->
-        <table> 
+    
+        <table id="container"> 
             <tr>
                 <th>ID</th>
                 <th>No. Inventario</th>
@@ -121,11 +124,7 @@
             ";
         }
             echo "</table>";
-        //switch de las opciones del select    
-
-
 ?>
-    <br><br>
         <form method="post" class="salto1" action="formularioNA.php">
             <input type="submit" class="btnInit" value="Añadir nuevo administrador" />
         </form>

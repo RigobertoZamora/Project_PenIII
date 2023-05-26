@@ -10,6 +10,7 @@
     <li><a href="mostrar_datos1.php">Regresar</a></li>
   </ul>
 <!------------------------------------------------------------->
+<!--No tiene los estilos-->
   <h1><center>Nuevo administrador añadido exitosamente</center></h1>
      <h3>Los datos que se recibieron son:</h3>
      <span>Nombre completo: </span><?php echo $_POST['ncompletona']; ?><br>     

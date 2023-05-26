@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control de inventario</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="central-style.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="funciones.js"></script>
 </head>
@@ -17,19 +17,23 @@
     $resultado = mysqli_query($conexion, $querySelect);
  ?>
  <!--Sección de la lista (me encanta este separador)--------------------------->
-        <nav class="menu">
-        <div class="contenedor">
-        <ul> 
-            <li><a href="formulario.php">CERRAR SESION</a></li>
-            <li><a href="mostrar_datos1.php">REGISTROS ACTUALES</a></li>
-            <li><a href="historial.php">HISTORIAL</a></li>
-            <li><a href="inventario.php">INVENTARIO</a></li>
-            <li><a href="administradores.php">ADMINISTRADORES</a></li>
-        </ul>
+        <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox"/>
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <li><a href="formulario.php">CERRAR SESION</a></li>
+                <li><a href="mostrar_datos1.php">REGISTROS ACTUALES</a></li>
+                <li><a href="historial.php">HISTORIAL</a></li>
+                <li><a href="inventario.php">INVENTARIO</a></li>
+                <li><a href="administradores.php">ADMINISTRADORES</a></li>
+            </ul>
         </div>
         </nav>  
 <!----------------------------------------------------------------------------->
-        <br><h1>Inventario del centro de computo principal</h1>
+        <br><h1><center>Inventario del centro de computo </center></h1>
         <h3>Selecciona un tipo de equipo para una visualización más precisa:</h3>
         <form method="post" action="filtros.php" name="formularioEquipos">
             <select id="equipo" class="input" name="equipo">
@@ -44,7 +48,7 @@
             <!--Añadir una clase de estilos, en este boton y en los de inventario.php-->
         </form>  
         <br><br>
-        <table> 
+        <table id="container"> 
             <tr>
                 <th>ID</th>
                 <th>No. Inventario</th>
